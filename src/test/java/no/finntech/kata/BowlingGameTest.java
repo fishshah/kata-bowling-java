@@ -16,4 +16,10 @@ public class BowlingGameTest {
     public void shouldGetScore_2_when_1_1() {
         assertThat(BowlingGame.getPlayer1Score(1, 1)).isEqualTo(2);
     }
+
+    @Test
+    public void Should_Get_Spare() {
+        assertThat(BowlingGame.getPlayer1Score(1, 9, 8)).isEqualTo(26);
+
+    }
 }
