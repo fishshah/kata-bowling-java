@@ -21,7 +21,7 @@ public class BowlingGame {
                     result += frames[i].t3;
                 } else {
                     result = result + frames[i+1].getScore();
-                    if (frames[i+1].isStrike()) {
+                    if (frames[i+1].isStrike() && !frames[i+1].isLastFrame()) {
                         result = result + frames[i+2].t1;
                     }
                 }
