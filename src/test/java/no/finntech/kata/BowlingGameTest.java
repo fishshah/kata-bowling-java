@@ -20,6 +20,10 @@ public class BowlingGameTest {
     @Test
     public void Should_Get_Spare() {
         assertThat(BowlingGame.getPlayer1Score(new BowlingGame.Frame(1, 9), new BowlingGame.Frame(8, 0))).isEqualTo(26);
+    }
 
+    @Test
+    public void strikeShouldAddNextTwoThrowsToScore() {
+        assertThat(BowlingGame.getPlayer1Score(new BowlingGame.Frame(10, 0), new BowlingGame.Frame(1, 2))).isEqualTo(16);
     }
 }
