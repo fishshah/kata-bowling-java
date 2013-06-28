@@ -12,6 +12,9 @@ public class BowlingGame {
             }
             if (frames[i].isStrike()) {
                 result = result + frames[i+1].getScore();
+                if (frames[i+1].isStrike()) {
+                    result = result + frames[i+2].t1;
+                }
             }
         }
         return result;
