@@ -10,6 +10,9 @@ public class BowlingGame {
             if (frames[i].isSpare()) {
                 result = result + frames[i+1].t1;
             }
+            if (frames[i].isStrike()) {
+                result = result + frames[i+1].getScore();
+            }
         }
         return result;
 
@@ -30,7 +33,12 @@ public class BowlingGame {
         }
 
         public boolean isSpare() {
-            return t1 + t2 == 10;
+
+            return t1 + t2 == 10 && t1 != 10;
+        }
+
+        public boolean isStrike() {
+            return t1 == 10;
         }
     }
 
