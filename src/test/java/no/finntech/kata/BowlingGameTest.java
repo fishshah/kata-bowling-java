@@ -89,4 +89,20 @@ public class BowlingGameTest {
                 new BowlingGame.Frame(10,10,10)))
                 .isEqualTo(300);
     }
+
+    @Test
+    public void game_of_spare() {
+        assertThat(BowlingGame.getPlayer1Score(
+                new BowlingGame.Frame(9,1),
+                new BowlingGame.Frame(9,1),
+                new BowlingGame.Frame(9,1),
+                new BowlingGame.Frame(9,1),
+                new BowlingGame.Frame(9,1),
+                new BowlingGame.Frame(9,1),
+                new BowlingGame.Frame(9,1),
+                new BowlingGame.Frame(9,1),
+                new BowlingGame.Frame(9,1),
+                new BowlingGame.Frame(9,1,9)))
+                .isEqualTo(190);
+    }
 }
