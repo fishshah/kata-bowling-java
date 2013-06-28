@@ -36,4 +36,13 @@ public class BowlingGameTest {
                 new BowlingGame.Frame(1, 2)))
                 .isEqualTo(16);
     }
+
+    @Test
+    public void next_To_Throws_Should_Be_Double_Strike() {
+        assertThat(BowlingGame.getPlayer1Score(
+                new BowlingGame.Frame(10, 0),  //23
+                new BowlingGame.Frame(10, 0),  //17
+                new BowlingGame.Frame(3, 4)))  //7
+                .isEqualTo(47);
+    }
 }
