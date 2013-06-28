@@ -9,17 +9,17 @@ public class BowlingGameTest {
 
     @Test
     public void Score_Should_not_Be_Zero() {
-        assertThat(BowlingGame.getPlayer1Score(1)).isEqualTo(1);
+        assertThat(BowlingGame.getPlayer1Score(new BowlingGame.Frame(1, 0))).isEqualTo(1);
     }
 
     @Test
     public void shouldGetScore_2_when_1_1() {
-        assertThat(BowlingGame.getPlayer1Score(1, 1)).isEqualTo(2);
+        assertThat(BowlingGame.getPlayer1Score(new BowlingGame.Frame(1, 1))).isEqualTo(2);
     }
 
     @Test
     public void Should_Get_Spare() {
-        assertThat(BowlingGame.getPlayer1Score(1, 9, 8)).isEqualTo(26);
+        assertThat(BowlingGame.getPlayer1Score(new BowlingGame.Frame(1, 9), new BowlingGame.Frame(8, 0))).isEqualTo(26);
 
     }
 }
