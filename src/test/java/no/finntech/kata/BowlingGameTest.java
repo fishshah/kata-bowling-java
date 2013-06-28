@@ -59,4 +59,11 @@ public class BowlingGameTest {
                 new BowlingGame.Frame(10,1,4)))
                 .isEqualTo(15);
     }
+
+    @Test
+    public void lastThrowInlastFrameIsOnlyStrikes() {
+        assertThat(BowlingGame.getPlayer1Score(
+                new BowlingGame.Frame(10,10,10)))
+                .isEqualTo(30);
+    }
 }
