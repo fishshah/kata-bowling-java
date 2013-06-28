@@ -25,10 +25,18 @@ public class BowlingGame {
 
         private final int t1;
         private final int t2;
+        private final int t3;
 
         public Frame(int t1, int t2) {
             this.t1 = t1;
             this.t2 = t2;
+            this.t3 = 0;
+        }
+
+        public Frame(int t1, int t2, int t3) {
+            this.t1 = t1;
+            this.t2 = t2;
+            this.t3 = t3;
         }
 
         public int getScore() {
