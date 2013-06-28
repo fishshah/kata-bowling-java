@@ -73,4 +73,20 @@ public class BowlingGameTest {
                 new BowlingGame.Frame(5,5,10)))
                 .isEqualTo(20);
     }
+
+    @Test
+    public void perfectGame() {
+        assertThat(BowlingGame.getPlayer1Score(
+                new BowlingGame.Frame(10,0),
+                new BowlingGame.Frame(10,0),
+                new BowlingGame.Frame(10,0),
+                new BowlingGame.Frame(10,0),
+                new BowlingGame.Frame(10,0),
+                new BowlingGame.Frame(10,0),
+                new BowlingGame.Frame(10,0),
+                new BowlingGame.Frame(10,0),
+                new BowlingGame.Frame(10,0),
+                new BowlingGame.Frame(10,10,10)))
+                .isEqualTo(300);
+    }
 }
