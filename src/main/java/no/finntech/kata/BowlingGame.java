@@ -4,7 +4,11 @@ public class BowlingGame {
 
 
     public static int getPlayer1Score(int... pins) {
-        return pins[0];
+        int result =0;
+        for (int i: pins) {
+         result = result + i;
+        }
+        return result;
 
     }
 }
