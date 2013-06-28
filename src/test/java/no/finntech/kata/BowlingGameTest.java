@@ -91,6 +91,22 @@ public class BowlingGameTest {
     }
 
     @Test
+    public void almostPerfectGame() {
+        assertThat(BowlingGame.getPlayer1Score(
+                new BowlingGame.Frame(10,0), // 30
+                new BowlingGame.Frame(10,0), // 60
+                new BowlingGame.Frame(10,0), // 90
+                new BowlingGame.Frame(10,0), // 120
+                new BowlingGame.Frame(10,0), // 150
+                new BowlingGame.Frame(10,0), // 180
+                new BowlingGame.Frame(10,0), // 210
+                new BowlingGame.Frame(10,0), // 232
+                new BowlingGame.Frame(10,0), // 252
+                new BowlingGame.Frame(2,8,10))) // 272
+                .isEqualTo(272);
+    }
+
+    @Test
     public void game_of_spare() {
         assertThat(BowlingGame.getPlayer1Score(
                 new BowlingGame.Frame(9,1),
