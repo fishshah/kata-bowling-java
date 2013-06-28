@@ -8,7 +8,13 @@ public class BowlingGame {
         for (int i = 0; i<frames.length; i++) {
             result = result + frames[i].getScore();
             if (frames[i].isSpare()) {
-                result = result + frames[i+1].t1;
+                if (frames[i].isLastFrame()) {
+                    result = result + frames[i].t3;
+                }
+                else {
+                    result = result + frames[i+1].t1;
+
+                }
             }
             if (frames[i].isStrike()) {
                 result = result + frames[i+1].getScore();
@@ -50,6 +56,10 @@ public class BowlingGame {
 
         public boolean isStrike() {
             return t1 == 10;
+        }
+
+        public boolean isLastFrame() {
+            return t3 !=0;
         }
     }
 
