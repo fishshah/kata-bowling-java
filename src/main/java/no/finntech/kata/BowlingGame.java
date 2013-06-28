@@ -5,8 +5,11 @@ public class BowlingGame {
 
     public static int getPlayer1Score(Frame... pins) {
         int result =0;
-        for (Frame frame: pins) {
-         result = result + frame.getScore();
+        for (int i = 0; i<pins.length; i++) {
+            result = result + pins[i].getScore();
+            if (pins[i].isSpare()) {
+                result = result + pins[i+1].t1;
+            }
         }
         return result;
 
@@ -24,6 +27,10 @@ public class BowlingGame {
 
         public int getScore() {
             return t1 + t2;
+        }
+
+        public boolean isSpare() {
+            return t1 + t2 == 10;
         }
     }
 
