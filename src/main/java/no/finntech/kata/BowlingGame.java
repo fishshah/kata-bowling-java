@@ -36,17 +36,20 @@ public class BowlingGame {
         private final int t1;
         private final int t2;
         private final int t3;
+        private final boolean lastFrame;
 
         public Frame(int t1, int t2) {
             this.t1 = t1;
             this.t2 = t2;
             this.t3 = 0;
+            lastFrame = false;
         }
 
         public Frame(int t1, int t2, int t3) {
             this.t1 = t1;
             this.t2 = t2;
             this.t3 = t3;
+            lastFrame = true;
         }
 
         public int getScore() {
@@ -63,7 +66,7 @@ public class BowlingGame {
         }
 
         public boolean isLastFrame() {
-            return t3 !=0;
+            return lastFrame;
         }
     }
 
