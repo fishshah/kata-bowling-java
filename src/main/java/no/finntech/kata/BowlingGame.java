@@ -3,12 +3,12 @@ package no.finntech.kata;
 public class BowlingGame {
 
 
-    public static int getPlayer1Score(Frame... pins) {
-        int result =0;
-        for (int i = 0; i<pins.length; i++) {
-            result = result + pins[i].getScore();
-            if (pins[i].isSpare()) {
-                result = result + pins[i+1].t1;
+    public static int getPlayer1Score(Frame... frames) {
+        int result = 0;
+        for (int i = 0; i<frames.length; i++) {
+            result = result + frames[i].getScore();
+            if (frames[i].isSpare()) {
+                result = result + frames[i+1].t1;
             }
         }
         return result;

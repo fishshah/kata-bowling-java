@@ -8,7 +8,7 @@ import static org.fest.assertions.Assertions.assertThat;
 public class BowlingGameTest {
 
     @Test
-    public void Score_Should_not_Be_Zero() {
+    public void shouldGetScore_1_when_1_0() {
         assertThat(BowlingGame.getPlayer1Score(new BowlingGame.Frame(1, 0))).isEqualTo(1);
     }
 
@@ -18,12 +18,12 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void Should_Get_Spare() {
+    public void spareShouldAddNextThrowToFrameScore() {
         assertThat(BowlingGame.getPlayer1Score(new BowlingGame.Frame(1, 9), new BowlingGame.Frame(8, 0))).isEqualTo(26);
     }
 
     @Test
-    public void strikeShouldAddNextTwoThrowsToScore() {
+    public void strikeShouldAddNextTwoThrowsToFrameScore() {
         assertThat(BowlingGame.getPlayer1Score(new BowlingGame.Frame(10, 0), new BowlingGame.Frame(1, 2))).isEqualTo(16);
     }
 }
